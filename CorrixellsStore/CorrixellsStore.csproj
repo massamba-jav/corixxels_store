@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D170066-501B-48C3-A2F1-2E5DF6EE9339}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CorrixellsStore</RootNamespace>
+    <AssemblyName>CorrixellsStore</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DataVisualization.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Back\ChiffreAffaire.cs" />
+    <Compile Include="Back\HistoriqueVente.cs" />
+    <Compile Include="Back\Magasin.cs" />
+    <Compile Include="Back\Produit.cs" />
+    <Compile Include="Back\Rupture.cs" />
+    <Compile Include="Back\Stock.cs" />
+    <Compile Include="Back\Vente.cs" />
+    <Compile Include="Enregistrement\ExportCSV.cs" />
+    <Compile Include="Enregistrement\FichierJson.cs" />
+    <Compile Include="Formulaires\MenuFormComplet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaires\MenuFormComplet.Designer.cs">
+      <DependentUpon>MenuFormComplet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\UCAddProduit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulaires\UCAddProduit.Designer.cs">
+      <DependentUpon>UCAddProduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\UCDeleteProduit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulaires\UCDeleteProduit.Designer.cs">
+      <DependentUpon>UCDeleteProduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\UCUpdateProduit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulaires\UCUpdateProduit.Designer.cs">
+      <DependentUpon>UCUpdateProduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\UCAddVente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulaires\UCAddVente.Designer.cs">
+      <DependentUpon>UCAddVente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\UCDeleteVente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulaires\UCDeleteVente.Designer.cs">
+      <DependentUpon>UCDeleteVente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\UCUpdateVente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulaires\UCUpdateVente.Designer.cs">
+      <DependentUpon>UCUpdateVente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\UCAccueil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulaires\UCAccueil.Designer.cs">
+      <DependentUpon>UCAccueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\UCAffaire.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulaires\UCAffaire.Designer.cs">
+      <DependentUpon>UCAffaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\UCAlerte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulaires\UCAlerte.Designer.cs">
+      <DependentUpon>UCAlerte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\UCHistorique.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulaires\UCHistorique.Designer.cs">
+      <DependentUpon>UCHistorique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\UCStock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulaires\UCStock.Designer.cs">
+      <DependentUpon>UCStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\UCTraitementProduit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulaires\UCTraitementProduit.Designer.cs">
+      <DependentUpon>UCTraitementProduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\UCTraitementVente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulaires\UCTraitementVente.Designer.cs">
+      <DependentUpon>UCTraitementVente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Formulaires\MenuFormComplet.resx">
+      <DependentUpon>MenuFormComplet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\UCAddProduit.resx">
+      <DependentUpon>UCAddProduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\UCDeleteProduit.resx">
+      <DependentUpon>UCDeleteProduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\UCUpdateProduit.resx">
+      <DependentUpon>UCUpdateProduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\UCAddVente.resx">
+      <DependentUpon>UCAddVente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\UCDeleteVente.resx">
+      <DependentUpon>UCDeleteVente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\UCUpdateVente.resx">
+      <DependentUpon>UCUpdateVente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\UCAccueil.resx">
+      <DependentUpon>UCAccueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\UCAffaire.resx">
+      <DependentUpon>UCAffaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\UCAlerte.resx">
+      <DependentUpon>UCAlerte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\UCHistorique.resx">
+      <DependentUpon>UCHistorique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\UCStock.resx">
+      <DependentUpon>UCStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\UCTraitementProduit.resx">
+      <DependentUpon>UCTraitementProduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\UCTraitementVente.resx">
+      <DependentUpon>UCTraitementVente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\corrixellsstoredash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\iconecorrixells.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
